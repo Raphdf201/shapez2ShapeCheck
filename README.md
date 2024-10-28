@@ -24,7 +24,7 @@ g++ -o lookup5 lookup.cpp -std=c++23 -O3 -DCONFIG_LAYER=5
 make ALL
 ```
 
-3. Enumerate all the shapes and store in a binary file
+2. Enumerate all the shapes and store in a binary file
 ```
 $ ./search4 dump4.bin
 ...
