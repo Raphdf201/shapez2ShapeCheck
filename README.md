@@ -1,16 +1,29 @@
 # Shapez 2 all possible shapes
 
 This project lists all the possible shapes in Shapez 2 by bruteforce.
+This fork changes little things to make the compiling process easier
 
 ## Requirements
-1. A C++ compiler supporting C++23.
+1. A C++ compiler supporting C++23 (use -std=c++23 argument)
 2. Enumerating all the shapes for Normal and Hard scenarios (4 layers, 4 parts per layer) takes ~32MB memory and ~1.5 minutes.
 3. Enumerating all the shapes for Insane scenario (5 layers, 4 parts per layer) takes ~8GB memory and ~2 hours.
 
 ## Usage
-1. Init submodule and build
+1. Compile the search and lookup files
+1.1. Manual method :
+```
+g++ -o search4 search.cpp -std=c++23 -O3
+g++ -o lookup4 lookup.cpp -std=c++23 -O3
+g++ -o search5 search.cpp -std=c++23 -O3 -DCONFIG_LAYER=5
+g++ -o lookup5 lookup.cpp -std=c++23 -O3 -DCONFIG_LAYER=5
+```
 
-2. Enumerate all the shapes and store in a binary file
+1.2. Use the make command (linux only)
+```
+make ALL
+```
+
+3. Enumerate all the shapes and store in a binary file
 ```
 $ ./search4 dump4.bin
 ...
