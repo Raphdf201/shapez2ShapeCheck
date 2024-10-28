@@ -10,6 +10,7 @@ This fork changes little things to make the compiling process easier
 
 ## Usage
 1. Compile the search and lookup files
+
 1.1. Manual method :
 ```
 g++ -o search4 search.cpp -std=c++23 -O3
