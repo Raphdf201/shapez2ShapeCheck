@@ -8,10 +8,13 @@ This fork changes little things to make the compiling process easier
 2. Enumerating all the shapes for Normal and Hard scenarios (4 layers, 4 parts per layer) takes ~32MB memory and ~1.5 minutes.
 3. Enumerating all the shapes for Insane scenario (5 layers, 4 parts per layer) takes ~8GB memory and ~2 hours.
 
+# Facultative requirements
+make(makefile) or cmake >= 3.30
+
 ## Usage
 1. Compile the search and lookup files
 
-1.1. Manual method :
+1.1. Manual method using g++
 ```
 g++ -o search4 search.cpp -std=c++23 -O3
 g++ -o lookup4 lookup.cpp -std=c++23 -O3
@@ -22,6 +25,11 @@ g++ -o lookup5 lookup.cpp -std=c++23 -O3 -DCONFIG_LAYER=5
 1.2. Use the make command (linux only)
 ```
 make ALL
+```
+
+1.3. Use the cmake command
+```
+cmake CMakeLists.txt
 ```
 
 2. Enumerate all the shapes and store in a binary file
